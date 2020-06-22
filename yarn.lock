@@ -2,6 +2,16 @@
 # yarn lockfile v1
 
 
+"@types/node@*":
+  version "14.0.13"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.13.tgz#ee1128e881b874c371374c1f72201893616417c9"
+
+"@types/yauzl@^2.9.1":
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/@types/yauzl/-/yauzl-2.9.1.tgz#d10f69f9f522eef3cf98e30afb684a1e1ec923af"
+  dependencies:
+    "@types/node" "*"
+
 acorn-jsx@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-3.0.1.tgz#afdf9488fb1ecefc8348f6fb22f464e32a58b36b"
@@ -118,6 +128,10 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
+buffer-crc32@~0.2.3:
+  version "0.2.13"
+  resolved "https://registry.yarnpkg.com/buffer-crc32/-/buffer-crc32-0.2.13.tgz#0d333e3f00eac50aa1454abd30ef8c2a5d9a7242"
+
 caller-path@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/caller-path/-/caller-path-0.1.0.tgz#94085ef63581ecd3daa92444a8fe94e82577751f"
@@ -173,7 +187,7 @@ concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
 
-concat-stream@1.6.0, concat-stream@^1.5.2, concat-stream@^1.6.0:
+concat-stream@^1.5.2, concat-stream@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/concat-stream/-/concat-stream-1.6.0.tgz#0aac662fd52be78964d5532f694784e70110acf7"
   dependencies:
@@ -185,17 +199,17 @@ core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-debug@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-2.2.0.tgz#f87057e995b1a1f6ae6a4960664137bc56f039da"
-  dependencies:
-    ms "0.7.1"
-
 debug@^2.4.1, debug@^2.6.8:
   version "2.6.8"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.8.tgz#e731531ca2ede27d188222427da17821d68ff4fc"
   dependencies:
     ms "2.0.0"
+
+debug@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.1.tgz#3b72260255109c6b589cee050f1d516139664791"
+  dependencies:
+    ms "^2.1.1"
 
 deep-is@~0.1.3:
   version "0.1.3"
@@ -227,6 +241,12 @@ doctrine@^2.0.0:
 emojis-list@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
+
+end-of-stream@^1.1.0:
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/end-of-stream/-/end-of-stream-1.4.4.tgz#5ae64a5f45057baf3626ec14da0ca5e4b2431eb0"
+  dependencies:
+    once "^1.4.0"
 
 "entities@~ 1.1.1":
   version "1.1.1"
@@ -350,14 +370,15 @@ external-editor@^2.0.4:
     jschardet "^1.4.2"
     tmp "^0.0.31"
 
-extract-zip@^1.6.5:
-  version "1.6.5"
-  resolved "https://registry.yarnpkg.com/extract-zip/-/extract-zip-1.6.5.tgz#99a06735b6ea20ea9b705d779acffcc87cff0440"
+extract-zip@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/extract-zip/-/extract-zip-2.0.1.tgz#663dca56fe46df890d5f131ef4a06d22bb8ba13a"
   dependencies:
-    concat-stream "1.6.0"
-    debug "2.2.0"
-    mkdirp "0.5.0"
-    yauzl "2.4.1"
+    debug "^4.1.1"
+    get-stream "^5.1.0"
+    yauzl "^2.10.0"
+  optionalDependencies:
+    "@types/yauzl" "^2.9.1"
 
 fast-deep-equal@^1.0.0:
   version "1.0.0"
@@ -367,9 +388,9 @@ fast-levenshtein@~2.0.4:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
 
-fd-slicer@~1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/fd-slicer/-/fd-slicer-1.0.1.tgz#8b5bcbd9ec327c5041bf9ab023fd6750f1177e65"
+fd-slicer@~1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/fd-slicer/-/fd-slicer-1.1.0.tgz#25c7c89cb1f9077f8891bbe61d8f390eae256f1e"
   dependencies:
     pend "~1.2.0"
 
@@ -422,6 +443,12 @@ generate-object-property@^1.1.0:
   resolved "https://registry.yarnpkg.com/generate-object-property/-/generate-object-property-1.2.0.tgz#9c0e1c40308ce804f4783618b937fa88f99d50d0"
   dependencies:
     is-property "^1.0.0"
+
+get-stream@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-5.1.0.tgz#01203cdc92597f9b909067c3e656cc1f4d3c4dc9"
+  dependencies:
+    pump "^3.0.0"
 
 glob@^7.0.3, glob@^7.0.5, glob@^7.0.6, glob@^7.1.2:
   version "7.1.2"
@@ -740,25 +767,19 @@ mixin-deep@^1.1.3:
     for-in "^1.0.2"
     is-extendable "^0.1.1"
 
-mkdirp@0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.0.tgz#1d73076a6df986cd9344e15e71fcc05a4c9abf12"
-  dependencies:
-    minimist "0.0.8"
-
 mkdirp@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
 
-ms@0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.1.tgz#9cd13c03adbff25b65effde7ce864ee952017098"
-
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
+
+ms@^2.1.1:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
 
 mute-stream@0.0.7:
   version "0.0.7"
@@ -786,7 +807,7 @@ object.pick@^1.2.0:
   dependencies:
     isobject "^2.1.0"
 
-once@^1.3.0:
+once@^1.3.0, once@^1.3.1, once@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/once/-/once-1.4.0.tgz#583b1aa775961d4b113ac17d9c50baef9dd76bd1"
   dependencies:
@@ -875,6 +896,13 @@ progress@^2.0.0:
 proxy-from-env@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.0.0.tgz#33c50398f70ea7eb96d21f7b817630a55791c7ee"
+
+pump@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/pump/-/pump-3.0.0.tgz#b4a2116815bde2f4e1ea602354e8c75565107a64"
+  dependencies:
+    end-of-stream "^1.1.0"
+    once "^1.3.1"
 
 randomatic@^1.1.3:
   version "1.1.7"
@@ -1118,8 +1146,9 @@ xtend@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.1.tgz#a5c6d532be656e23db820efb943a1f04998d63af"
 
-yauzl@2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/yauzl/-/yauzl-2.4.1.tgz#9528f442dab1b2284e58b4379bb194e22e0c4005"
+yauzl@^2.10.0:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/yauzl/-/yauzl-2.10.0.tgz#c7eb17c93e112cb1086fa6d8e51fb0667b79a5f9"
   dependencies:
-    fd-slicer "~1.0.1"
+    buffer-crc32 "~0.2.3"
+    fd-slicer "~1.1.0"
